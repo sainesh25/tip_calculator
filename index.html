@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    
+    <main>
+        <div class="tipcalculator">
+            <h1 class="tipcalculator-head">Tip Calculator</h1>
+
+            <div class="price">
+                <label for="priceIn">Price: </label>
+                <input class="input-dec" type="number" id="priceIn" placeholder="Enter Amount">
+            </div>
+            
+            <div class="price">
+                <label for="tipPercentIn">Tip %: </label>
+                <button class="buttons" id="subtractBtn">-</button><input type="number" id="tipPercentIn" placeholder="Tip Percent" class="input-dec"><button class="buttons" id="addBtn">+</button>
+            </div>
+            
+            <div class="price gst">
+                <label for="gstPercentIn">GST %: </label>
+                <button class="buttons" id="subtractBtn2">-</button><input type="number" id="gstPercentIn" placeholder="GST Percent" class="input-dec"><button class="buttons" id="addBtn2">+</button>
+            </div>
+
+            <div class="calculateClearBtns">
+                <button id="calculateBtn">Calculate</button>
+                <button id="clearBtn">Clear</button>
+            </div>
+            
+            <div class="answer-section">
+                <p>Tip Total: ₹<span id="tipTotalAmt"> 0 </span></p>
+                <p>Tax Total: ₹<span id="taxTotalAmt"> 0 </span></p>
+                <p>Total (Bill + Tip + GST): ₹<span id="grandTotalAmt"> 0 </span></p>
+        
+                <div class="price">
+                    <label for="noOfPeopleIn">Split the Bill? </label>
+                    <button id="deductPeopleBtn" class="buttons">-</button><input class="input-dec" type="number" id="noOfPeopleIn" placeholder="No of Persons"><button class="buttons" id="addPeopleBtn">+</button>
+                </div>
+                
+                <p id="splitedAmtTxt">Each person pay: ₹ <span id="splitAmt">0</span></p>
+                <button id="splitBillBtn">Split Bill</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
